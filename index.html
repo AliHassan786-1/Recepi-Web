@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recipe Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #e85d04;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: #9d3800;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 35px 15px;
+            background-color: #ffe8cc;
+        }
+
+        .hero h2 {
+            color: #d9480f;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 25px 15px;
+        }
+
+        h2 {
+            color: #d9480f;
+            margin-bottom: 15px;
+        }
+
+        .recipes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1 1 250px;
+            box-shadow: 0 3px 8px #ddd;
+        }
+
+        .card h3 {
+            color: #e85d04;
+            margin-bottom: 10px;
+        }
+
+        .card ul,
+        .card ol {
+            padding-left: 22px;
+        }
+
+        .media {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        iframe,
+        video {
+            width: 100%;
+            max-width: 650px;
+            border: none;
+            border-radius: 10px;
+            margin: 10px 0 20px;
+        }
+
+        iframe {
+            height: 365px;
+        }
+
+        video {
+            background: #222;
+        }
+
+        footer {
+            background: #9d3800;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            iframe {
+                height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🍲 My Recipe Website</h1>
+        <p>Discover delicious recipes and learn to cook!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#video">Cooking Video</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2>Welcome to My Kitchen!</h2>
+        <p>Find easy, tasty, and homemade recipes for everyone.</p>
+    </section>
+
+    <main class="container">
+
+        <section id="recipes">
+            <h2>Our Popular Recipes</h2>
+
+            <div class="recipes">
+
+                <div class="card">
+                    <h3>🍝 Pasta</h3>
+                    <p><strong>Ingredients:</strong></p>
+                    <ul>
+                        <li>2 cups pasta</li>
+                        <li>1 cup tomato sauce</li>
+                        <li>2 cloves garlic</li>
+                        <li>Salt and pepper</li>
+                    </ul>
+                    <p><strong>Instructions:</strong></p>
+                    <ol>
+                        <li>Boil pasta until tender.</li>
+                        <li>Cook garlic with tomato sauce.</li>
+                        <li>Mix pasta with the sauce and serve.</li>
+                    </ol>
+                </div>
+
+                <div class="card">
+                    <h3>🍕 Pizza</h3>
+                    <p><strong>Ingredients:</strong></p>
+                    <ul>
+                        <li>Pizza dough</li>
+                        <li>Pizza sauce</li>
+                        <li>Mozzarella cheese</li>
+                        <li>Vegetables of your choice</li>
+                    </ul>
+                    <p><strong>Instructions:</strong></p>
+                    <ol>
+                        <li>Spread sauce over the dough.</li>
+                        <li>Add cheese and toppings.</li>
+                        <li>Bake until golden and bubbly.</li>
+                    </ol>
+                </div>
+
+                <div class="card">
+                    <h3>🥞 Pancakes</h3>
+                    <p><strong>Ingredients:</strong></p>
+                    <ul>
+                        <li>1 cup flour</li>
+                        <li>1 egg</li>
+                        <li>3/4 cup milk</li>
+                        <li>1 teaspoon baking powder</li>
+                    </ul>
+                    <p><strong>Instructions:</strong></p>
+                    <ol>
+                        <li>Mix all ingredients in a bowl.</li>
+                        <li>Pour batter into a hot pan.</li>
+                        <li>Flip, cook until golden, and serve.</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="media" id="video">
+            <h2>Watch a Cooking Video Using iframe</h2>
+            <p>Learn cooking techniques from an embedded video.</p>
+
+            <iframe
+                src="https://www.youtube.com/embed/7s5Vw8j9P4o"
+                title="Cooking tutorial"
+                allowfullscreen>
+            </iframe>
+
+            <h2>Cooking Video Using the HTML video Tag</h2>
+            <p>This video uses a local or downloadable MP4 file.</p>
+
+            <video controls>
+                <source src="cooking.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <p>Place a video file named <strong>cooking.mp4</strong>
+               in the same folder as this HTML file.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: recipes@example.com</p>
+            <p>Share your favorite recipes with us!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Recipe Website | Made with ❤️</p>
+    </footer>
+
+</body>
+</html>
